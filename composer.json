@@ -1,7 +1,7 @@
 {
   "name": "dazzle/behat-date-manipulation",
   "type": "behat-extension",
-  "description": "Allows you to execute commands or custom steps with a different system date.",
+  "description": "Allows you to execute commands in custom steps with a different system date.",
   "version": "1.0.0-dev",
   "keywords": ["behat", "extension", "bdd"],
   "license": "GPL-2.0-or-later",
