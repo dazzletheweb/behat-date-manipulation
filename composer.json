@@ -1,0 +1,23 @@
+{
+  "name": "dazzle/behat-date-manipulation",
+  "type": "behat-extension",
+  "description": "Allows you to execute commands or custom steps with a different system date.",
+  "version": "1.0.0-dev",
+  "keywords": ["behat", "extension", "bdd"],
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Kevin Thiels",
+      "email": "kevin.thiels@dazzle.be"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dazzle\\BehatDateManipulation\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "drupal/drupal-extension": "~4.0"
+  }
+}
