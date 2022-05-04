@@ -5,7 +5,6 @@ namespace Dazzle\BehatDateManipulation;
 use Behat\Behat\Hook\Scope\BeforeScenarioScope;
 use Behat\Mink\Element\NodeElement;
 use Behat\MinkExtension\Context\RawMinkContext;
-use Symfony\Component\Config\Definition\Exception\Exception;
 
 /**
  * Defines application features from the specific context.
@@ -31,16 +30,6 @@ class FeatureContext extends RawMinkContext {
    */
   public function __construct($parameters) {
     $this->parameters = $parameters;
-  }
-
-  /**
-   * Set before each scenario the base URL, if needed override it
-   *
-   * @BeforeScenario
-   */
-  public function beforeScenario(BeforeScenarioScope $scope) {
-    // Load and save the environment for each scenario.
-    $this->environment = $scope->getEnvironment();
   }
 
   /**
