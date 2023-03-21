@@ -39,8 +39,12 @@ class FeatureContext extends RawMinkContext {
    */
   public function iManipulateDateAndExecuteCmd($date, $command) {
     $instruction = 'LD_PRELOAD=' . $this->parameters['install_path'] . ' FAKETIME="' . $date . '" ' . $command;
-    $result = explode(PHP_EOL, shell_exec($instruction . ' 2>&1'));
-    return $result[0];
+    $exec_result = shell_exec($instruction . ' 2>&1');
+    if ($exec_result) {
+      $result = explode(PHP_EOL, $exec_result);
+      return $result[0];
+    }
+    return $exec_result;
   }
 
 }
